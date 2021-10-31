@@ -13,6 +13,7 @@
 		6B3F35E1272B3AFD00F2673D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F35DF272B3AFD00F2673D /* Main.storyboard */; };
 		6B3F35E3272B3AFF00F2673D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F35E2272B3AFF00F2673D /* Assets.xcassets */; };
 		6B3F35E6272B3AFF00F2673D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F35E4272B3AFF00F2673D /* LaunchScreen.storyboard */; };
+		6B5DD61C272EE5FD00AC9FD1 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5DD61B272EE5FD00AC9FD1 /* 120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6B3F35E2272B3AFF00F2673D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3F35E5272B3AFF00F2673D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B3F35E7272B3AFF00F2673D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5DD61B272EE5FD00AC9FD1 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 120.png; path = ../../../../../../../Desktop/Assets/AppIcons/Assets.xcassets/AppIcon.appiconset/120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6B3F35E2272B3AFF00F2673D /* Assets.xcassets */,
 				6B3F35E4272B3AFF00F2673D /* LaunchScreen.storyboard */,
 				6B3F35E7272B3AFF00F2673D /* Info.plist */,
+				6B5DD61B272EE5FD00AC9FD1 /* 120.png */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3F35E6272B3AFF00F2673D /* LaunchScreen.storyboard in Resources */,
+				6B5DD61C272EE5FD00AC9FD1 /* 120.png in Resources */,
 				6B3F35E3272B3AFF00F2673D /* Assets.xcassets in Resources */,
 				6B3F35E1272B3AFD00F2673D /* Main.storyboard in Resources */,
 			);
@@ -287,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MNX844B76T;
@@ -316,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MNX844B76T;

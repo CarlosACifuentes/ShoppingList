@@ -1,26 +1,29 @@
-//
-//  ViewController.swift
-//  ShoppingList
-//
-//  Created by Carlos Cifuentes on 2021-10-28.
-//
+/*
+Autor: Carlos Cifuentes.
+StudentID: 301140805
+Date: 10/31/2021
+Version: 1
+Description: MAPD714 - iOS Development. Mid-TermTest. Simple Shopping List App.
+ */
 
 import UIKit
 
 class ViewController: UIViewController {
     
+    //Int variables for counters.
     var itemOneCounter: Int = 0
     var itemTwoCounter: Int = 0
     var itemThreeCounter: Int = 0
     var itemFourCounter: Int = 0
-    var ListName = ""
-    
+
+    // Referencing Outlets of counter Labels
     @IBOutlet weak var counterOneLabel: UILabel!
     @IBOutlet weak var counterTwoLabel: UILabel!
     @IBOutlet weak var counterThreeLabel: UILabel!
     @IBOutlet weak var counterFourLabel: UILabel!
     @IBOutlet weak var counterFiveLabel: UILabel!
     
+    // Referencing Outlets of Items textFields
     @IBOutlet weak var ItemFiveStepper: UIStepper!
     @IBOutlet weak var ShoppingListName: UITextField!
     @IBOutlet weak var itemOneTextField: UITextField!
@@ -35,6 +38,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+// functions to increase or decrease quantity on each item (min 0, max 10).
     
     @IBAction func onControlsItemOnePressed(_ sender: UIButton)
     {
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
         {
             itemOneCounter -= 1
         }
-            
+        //assigns number to the item label text.
         counterOneLabel.text = "\(itemOneCounter)"
         
     }
@@ -97,13 +101,14 @@ class ViewController: UIViewController {
         counterFourLabel.text = "\(itemFourCounter)"
         
     }
-    
+    // additional function to implement stepper, assigns stepper current value to the item label.
     @IBAction func onStepperPressed(_ sender: UIStepper) {
 
         counterFiveLabel.text = String("\(Int(sender.value))")
     }
     
-    
+    // function of cancell button, shows alert to double check if the user is possibite about resoring data.
+    // Restores all values to the default state.
     @IBAction func onCancelButtonPressed(_ sender: UIButton) {
        
         let notificationCancel = UIAlertController(title: "Wait!", message: "You are about to delete your list, are you sure?", preferredStyle: .alert)
@@ -131,11 +136,7 @@ class ViewController: UIViewController {
                 self.present(notificationCancel, animated: true)
     }
     
-    
-    
-    
-    
-    
+    //function for save button, sends alertt to notify users the functionality is not ready yet.
     @IBAction func onSaveButtonPressed(_ sender: UIButton) {
         let notificationSave = UIAlertController(title: "Oops!", message: "This functionality will be available soon.", preferredStyle: .alert)
 
