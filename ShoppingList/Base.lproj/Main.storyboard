@@ -81,7 +81,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0fX-fI-7eh">
                                         <rect key="frame" x="16" y="51.333333333333314" width="326" height="39.333333333333343"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8M-TP-JL5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C8M-TP-JL5">
                                                 <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="C8M-TP-JL5" secondAttribute="height" multiplier="23:4" id="2AD-UX-uIC"/>
@@ -89,13 +89,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9p-jt-MDY">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9p-jt-MDY">
                                                 <rect key="frame" x="235.33333333333331" y="0.0" width="26.666666666666686" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="D9p-jt-MDY" secondAttribute="height" multiplier="27:40" id="hcu-rr-aL7"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Minus_btn"/>
+                                                <connections>
+                                                    <action selector="onControlsItemOnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFa-cD-mFY"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1FQ-wB-wxg">
                                                 <rect key="frame" x="272" y="0.0" width="17.666666666666686" height="39.333333333333336"/>
@@ -113,29 +116,32 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wuv-Ee-qBS">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wuv-Ee-qBS">
                                                 <rect key="frame" x="299.66666666666669" y="0.0" width="26.333333333333314" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Wuv-Ee-qBS" secondAttribute="height" multiplier="27:40" id="pvy-U7-XBK"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Plus_btn" title=""/>
+                                                <connections>
+                                                    <action selector="onControlsItemOnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TV-JK-21D"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCm-2Q-cVR">
-                                        <rect key="frame" x="16" y="415" width="326" height="53"/>
+                                        <rect key="frame" x="16" y="408" width="326" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cCm-2Q-cVR" secondAttribute="height" multiplier="326:53" id="bz7-Vw-PXz"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Cancel_btn" title=""/>
                                         <connections>
-                                            <action selector="onSaveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCa-e6-tnz"/>
+                                            <action selector="onCancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fs-Rg-zzw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmZ-1L-dHu">
-                                        <rect key="frame" x="32" y="343.33333333333337" width="294" height="47.666666666666686"/>
+                                        <rect key="frame" x="32" y="336" width="294" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qmZ-1L-dHu" secondAttribute="height" multiplier="326:53" id="nEV-pe-3YP"/>
                                         </constraints>
@@ -143,6 +149,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Save_btn">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onSaveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxM-1S-ksO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-P0-tHv">
                                         <rect key="frame" x="16" y="16" width="107" height="15.333333333333336"/>
@@ -160,7 +169,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cHB-eq-86R">
                                         <rect key="frame" x="16" y="106.66666666666669" width="326" height="39"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGw-TP-2T4">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hGw-TP-2T4">
                                                 <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="hGw-TP-2T4" secondAttribute="height" multiplier="23:4" id="xSU-Jl-WON"/>
@@ -168,13 +177,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXk-R3-RuJ">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXk-R3-RuJ">
                                                 <rect key="frame" x="235.33333333333331" y="0.0" width="26.666666666666686" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DXk-R3-RuJ" secondAttribute="height" multiplier="27:40" id="yAV-RR-enb"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Minus_btn"/>
+                                                <connections>
+                                                    <action selector="onControlsItemTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UwE-oa-n1G"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4l8-fF-niZ">
                                                 <rect key="frame" x="272" y="0.0" width="17.666666666666686" height="39"/>
@@ -192,20 +204,23 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-zL-XfN">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-zL-XfN">
                                                 <rect key="frame" x="299.66666666666669" y="0.0" width="26.333333333333314" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BCn-zL-XfN" secondAttribute="height" multiplier="27:40" id="gfL-0i-KkR"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Plus_btn" title=""/>
+                                                <connections>
+                                                    <action selector="onControlsItemTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmQ-EZ-7O3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-ty-E2q">
                                         <rect key="frame" x="16" y="161.66666666666669" width="326" height="39.333333333333343"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E14-9s-hcl">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E14-9s-hcl">
                                                 <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="E14-9s-hcl" secondAttribute="height" multiplier="23:4" id="190-x3-pKX"/>
@@ -213,13 +228,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-cg-ue8">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-cg-ue8">
                                                 <rect key="frame" x="235.33333333333331" y="0.0" width="26.666666666666686" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="QqP-cg-ue8" secondAttribute="height" multiplier="27:40" id="HhO-f4-SCt"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Minus_btn"/>
+                                                <connections>
+                                                    <action selector="onControlsItemThreePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ky-9u-lDS"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KQE-Sr-Ogq">
                                                 <rect key="frame" x="272" y="0.0" width="17.666666666666686" height="39.333333333333336"/>
@@ -237,20 +255,23 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyY-1V-iof">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyY-1V-iof">
                                                 <rect key="frame" x="299.66666666666669" y="0.0" width="26.333333333333314" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jyY-1V-iof" secondAttribute="height" multiplier="27:40" id="sNK-ik-Y3n"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Plus_btn" title=""/>
+                                                <connections>
+                                                    <action selector="onControlsItemThreePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y52-AK-AjR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KA6-me-fzY">
                                         <rect key="frame" x="16" y="217" width="326" height="39"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCV-aa-OK8">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fCV-aa-OK8">
                                                 <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fCV-aa-OK8" secondAttribute="height" multiplier="23:4" id="51j-c4-4pc"/>
@@ -258,13 +279,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-xe-6gh">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-xe-6gh">
                                                 <rect key="frame" x="235.33333333333331" y="0.0" width="26.666666666666686" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Dtt-xe-6gh" secondAttribute="height" multiplier="27:40" id="w1W-gD-hrx"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Minus_btn"/>
+                                                <connections>
+                                                    <action selector="onControlsItemFourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jma-Jt-kQ5"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lcl-7f-bXU">
                                                 <rect key="frame" x="272" y="0.0" width="17.666666666666686" height="39"/>
@@ -282,40 +306,32 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLN-qa-PSv">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLN-qa-PSv">
                                                 <rect key="frame" x="299.66666666666669" y="0.0" width="26.333333333333314" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="VLN-qa-PSv" secondAttribute="height" multiplier="27:40" id="zMl-Pp-OVp"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Plus_btn" title=""/>
+                                                <connections>
+                                                    <action selector="onControlsItemFourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2Q-nj-VSr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dzn-ty-iZf">
-                                        <rect key="frame" x="16" y="272" width="326" height="39.333333333333314"/>
+                                        <rect key="frame" x="16" y="272" width="326" height="32"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-Y2-IgX">
-                                                <rect key="frame" x="0.0" y="0.0" width="225.33333333333334" height="39.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-Y2-IgX">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mdO-Y2-IgX" secondAttribute="height" multiplier="23:4" id="txV-yP-sJF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AS-3m-dsa">
-                                                <rect key="frame" x="235.33333333333331" y="0.0" width="26.666666666666686" height="39.333333333333336"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="8AS-3m-dsa" secondAttribute="height" multiplier="27:40" id="hsB-HI-RE0"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Minus_btn"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-5w-rME">
-                                                <rect key="frame" x="272" y="0.0" width="17.666666666666686" height="39.333333333333336"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="d2L-5w-rME" secondAttribute="height" multiplier="9:20" id="Of6-wp-UzJ"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-5w-rME">
+                                                <rect key="frame" x="203.66666666666666" y="0.0" width="9" height="32"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0">
                                                         <attributes>
@@ -327,14 +343,12 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usx-as-dF0">
-                                                <rect key="frame" x="299.66666666666669" y="0.0" width="26.333333333333314" height="39.333333333333336"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="usx-as-dF0" secondAttribute="height" multiplier="27:40" id="OhU-l6-cMm"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Plus_btn" title=""/>
-                                            </button>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-yh-KcB">
+                                                <rect key="frame" x="232" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="onStepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="acP-YI-qJN"/>
+                                                </connections>
+                                            </stepper>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -386,7 +400,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ItemFiveStepper" destination="GYh-yh-KcB" id="BQs-e5-AIC"/>
                         <outlet property="ShoppingListName" destination="3AV-1s-SEb" id="8At-iF-AbX"/>
+                        <outlet property="counterFiveLabel" destination="d2L-5w-rME" id="VOf-2i-hbi"/>
+                        <outlet property="counterFourLabel" destination="lcl-7f-bXU" id="KjU-Mr-STv"/>
+                        <outlet property="counterOneLabel" destination="1FQ-wB-wxg" id="O16-As-Snz"/>
+                        <outlet property="counterThreeLabel" destination="KQE-Sr-Ogq" id="HX5-nl-L8e"/>
+                        <outlet property="counterTwoLabel" destination="4l8-fF-niZ" id="FtX-h8-Uya"/>
+                        <outlet property="itemFiveTextField" destination="mdO-Y2-IgX" id="FfK-QW-aHS"/>
+                        <outlet property="itemFourTextField" destination="fCV-aa-OK8" id="Qnf-du-a2u"/>
+                        <outlet property="itemOneTextField" destination="C8M-TP-JL5" id="lxZ-ae-ccm"/>
+                        <outlet property="itemThreeTextField" destination="E14-9s-hcl" id="FPV-kQ-od3"/>
+                        <outlet property="itemTwoTextField" destination="hGw-TP-2T4" id="H0W-9Z-KLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
